@@ -2,13 +2,13 @@
   <v-container class="c-map">
     <div class="map-wrap">
       <div ref="mapContainer" class="map">
-        <select id="styles" class="dropdownSelect">
+        <!-- <select id="styles" class="dropdownSelect">
           <option value="jawg-streets">jawg-streets</option>
           <option value="jawg-sunny">jawg-sunny</option>
           <option value="jawg-terrain">jawg-terrain</option>
           <option value="jawg-dark">jawg-dark</option>
           <option value="jawg-light">jawg-light</option>
-        </select>
+        </select> -->
       </div>
     </div>
   </v-container>
@@ -37,7 +37,6 @@ export default {
     const map = shallowRef(null)
 
     onMounted(() => {
-      console.log(jembatanComp.value)
       const apiKey = 'HAIayvA5luH3W9E0qoS7'
       if (apiKey == null) {
         throw new Error(
@@ -66,8 +65,6 @@ export default {
           ])
           .addTo(map.value)
       }
-
-      console.log(jembatanComp.value.jembatan[1].geom.coordinates[0])
     })
 
     onUnmounted(() => {

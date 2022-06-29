@@ -1,7 +1,6 @@
 <template>
   <div>
     <HomeMapComp v-if="jembatan.jembatan.length" :jembatan="jembatan" />
-    {{ jembatan.jembatan.length }}
   </div>
 </template>
 
@@ -22,7 +21,6 @@ export default {
       const res = await $services.geo.getGeo(payload)
       if (res.success) {
         jembatan.value = res.data
-        console.log('asd')
       }
     })
 
