@@ -21,8 +21,8 @@ export default {
   },
   props: {
     datas: {
-      type: String,
-      default: '',
+      type: Array,
+      default: () => [],
     },
   },
 }

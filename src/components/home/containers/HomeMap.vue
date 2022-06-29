@@ -11,7 +11,15 @@ export default {
     const { $services } = root
     const jembatan = ref([])
 
-    const operationsDoc = `query MyQuery {jembatan {geom}}`
+    const operationsDoc = `query MyQuery {
+  jembatan {
+    geom
+    nama_jembatan
+    lebar
+    panjang
+    nomor_jembatan
+  }
+}`
     const { fetch } = useFetch(async () => {
       const payload = JSON.stringify({
         query: operationsDoc,
