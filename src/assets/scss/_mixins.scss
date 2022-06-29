@@ -1,0 +1,159 @@
+@mixin mq-small-only {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mq-small-up {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mq-medium-only {
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-medium-up {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-medium-down {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mq-large-only {
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin mq-large-up {
+  @media only screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin mq-large-down {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin mq-xlarge-only {
+  @media only screen and (min-width: 960px) and (max-width: 1264px) {
+    @content;
+  }
+}
+
+@mixin mq-xlarge-up {
+  @media only screen and (min-width: 1264px) {
+    @content;
+  }
+}
+
+@mixin mq-xlarge-down {
+  @media only screen and (max-width: 1264px) {
+    @content;
+  }
+}
+
+@mixin mq-xxlarge-only {
+  @media only screen and (min-width: 1264px) and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin mq-xxlarge-up {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin mq-xxlarge-down {
+  @media only screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+//Responsive Settings
+
+// @mixin mq-medium-only {
+//   @media only screen and (max-width: 1023px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-small-up {
+//   @media only screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-medium-up {
+//   @media only screen and (min-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-mediumlarge-up {
+//   @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-medium-tab {
+//   @media only screen and (min-width: 768px) and (max-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-medium {
+//   @media only screen and (min-width: 768px) and (max-width: 1023px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-small-only {
+//   @media only screen and (max-width: 767px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-large-tab {
+//   @media only screen and (max-width: 1264px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-small-notebook {
+//   @media only screen and (max-height: 750px) {
+//     @content;
+//   }
+// }
+
+// @mixin mq-landscape {
+//   @media screen and (orientation: landscape) {
+//     @content;
+//   }
+// }
+
+.desktop-only {
+  display: block !important;
+  @include mq-medium-only {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  display: none !important;
+  @include mq-medium-only {
+    display: block !important ;
+  }
+}

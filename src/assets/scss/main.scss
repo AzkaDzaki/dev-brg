@@ -1,0 +1,183 @@
+// Global SCSS
+@import '_variables';
+@import '_border';
+@import '_mixins';
+@import 'vuetify';
+@import 'maplibre-gl/dist/maplibre-gl.css';
+
+#app {
+  font-family: 'Inter', sans-serif !important;
+  color: var(--black-80);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  background-color: #eff3f7;
+}
+
+img {
+  width: 100%;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+.search-dropdown {
+  .v-input__prepend-inner {
+    .v-input {
+      &__icon {
+        width: 40px;
+        min-width: 40px;
+        &::after {
+          content: '\F035D';
+          font: normal normal normal 24px/1 'Material Design Icons';
+          color: var(--black-40);
+          margin-left: -25px;
+        }
+        button {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  &__list {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: var(--blue-20);
+    }
+  }
+}
+
+// Color Class
+.color-black--80 {
+  color: var(--black-80);
+  &.important {
+    color: var(--black-80) !important;
+  }
+}
+.color-black--60 {
+  color: var(--black-60);
+}
+.color-black--20 {
+  color: var(--black-20);
+}
+.color-black--10 {
+  color: var(--black-10);
+}
+.color-black--5 {
+  color: var(--black-5);
+}
+
+.border-blue--80 {
+  border: 1px solid var(--blue-80);
+}
+.border-blue--60 {
+  border: 1px solid var(--blue-60);
+}
+.border-blue--20 {
+  border: 1px solid var(--blue-20);
+}
+.border-blue--10 {
+  border: 1px solid var(--blue-10);
+}
+.border-blue--5 {
+  border: 1px solid var(--blue-5);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.h-auto {
+  height: auto;
+
+  &:important {
+    height: auto !important;
+  }
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+hr.slight {
+  border-top: 1px solid var(--black-10) !important;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-150 {
+  width: 150px;
+  max-width: 100%;
+}
+
+.w-500 {
+  width: 500px;
+  max-width: 100%;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.rounded-1 {
+  &--important {
+    border-radius: 4px !important;
+  }
+  border-radius: 4px;
+}
+
+.rounded-3 {
+  border-radius: 12px;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-8 {
+  gap: 32px;
+}
